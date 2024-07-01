@@ -10,7 +10,7 @@ class FigmaAccount(ProviderAccount):
         return self.account.extra_data.get("handle", "")
 
     def get_avatar_url(self):
-        return self.account.extra_data.get("img_url", "")
+        return self.account.extra_data.get("email", "")
 
 
 class FigmaProvider(OAuth2Provider):

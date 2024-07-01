@@ -12,7 +12,6 @@ from allauth.socialaccount.providers.oauth2.provider import OAuth2Provider
 class AmazonCognitoAccount(ProviderAccount):
     def to_str(self):
         dflt = super(AmazonCognitoAccount, self).to_str()
-
         return self.account.extra_data.get("username", dflt)
 
     def get_avatar_url(self):

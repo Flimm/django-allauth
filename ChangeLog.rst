@@ -21,6 +21,10 @@ Note worthy changes
 - Headless: When trying to sign up while a user is already logged in, you now get
   a 409.
 
+- Changed the behaviour of the ``socialaccount_connections`` page to list
+  social accounts by their unique usernames or email addresses, rather than by
+  their non-unique display names.
+
 
 Security notice
 ---------------

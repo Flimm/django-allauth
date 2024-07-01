@@ -261,4 +261,4 @@ class ProviderAccount:
         So we have this method `to_str` that can be overridden in a conventional
         fashion, without having to worry about it.
         """
-        return self.get_brand()["name"]
+        return self.get_brand().get("email") or self.get_brand()["name"]

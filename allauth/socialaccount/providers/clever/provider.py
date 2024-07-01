@@ -12,7 +12,7 @@ class CleverAccount(ProviderAccount):
     def to_str(self):
         dflt = super(CleverAccount, self).to_str()
         return "%s (%s)" % (
-            self.account.extra_data.get("name", ""),
+            self.account.extra_data.get("data", {}).get("email", ""),
             dflt,
         )
 

@@ -12,6 +12,9 @@ from allauth.socialaccount.providers.quickbooks.views import (
 class QuickBooksAccount(ProviderAccount):
     def to_str(self):
         dflt = super(QuickBooksAccount, self).to_str()
+        email = self.account.extra_data.get("email")
+        if email:
+            return email
         name = self.account.extra_data.get("name", dflt)
         first_name = self.account.extra_data.get("givenName", None)
         last_name = self.account.extra_data.get("familyName", None)

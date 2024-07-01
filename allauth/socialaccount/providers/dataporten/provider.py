@@ -17,12 +17,12 @@ class DataportenAccount(ProviderAccount):
 
     def to_str(self):
         """
-        Returns string representation of a social account. Includes the name
-        of the user.
+        Returns string representation of a social account. This is the unique
+        identifier of the account, such as its username or its email address.
         """
         dflt = super(DataportenAccount, self).to_str()
         return "%s (%s)" % (
-            self.account.extra_data.get("name", ""),
+            self.account.extra_data.get("email", ""),
             dflt,
         )
 

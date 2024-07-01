@@ -10,7 +10,7 @@ class LineAccount(ProviderAccount):
         )
 
     def to_str(self):
-        return self.account.extra_data.get("displayName", self.account.uid)
+        return self.account.extra_data.get("email", self.account.uid)
 
 
 class LineProvider(OAuth2Provider):
